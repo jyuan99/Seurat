@@ -4,7 +4,7 @@ int rand_x, rand_y;
 void setup() {
   size(600, 600);
   background(255);
-  img = loadImage("Mario.jpg"); 
+  img = loadImage("Mario.jpg");
 }
 
 void draw() {
