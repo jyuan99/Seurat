@@ -29,6 +29,7 @@ void draw() {
   else if (keyPressed && key == 's'){
     diameter--;
     background(255);
+    text("diameter--", 100, 100);
   }
   
   for (int i = 0; i < 10; i++){ //i < 10 here specifies the speed of the program: the program only draws to canvas AFTER draw loop has run
