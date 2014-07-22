@@ -23,13 +23,12 @@ void setup() {
 
 void draw() {
   if (keyPressed && key == 'd') {
-    diameter++;
+    diameter += 0.5;
     background(255);
   }
   else if (keyPressed && key == 's'){
-    diameter--;
+    diameter -= 0.5;
     background(255);
-    text("diameter--", 100, 100);
   }
   
   for (int i = 0; i < 10; i++){ //i < 10 here specifies the speed of the program: the program only draws to canvas AFTER draw loop has run
