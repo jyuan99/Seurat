@@ -4,17 +4,25 @@ PImage img;
 int rand_x, rand_y;
 
 void setup() {
-  size(600, 600);
   background(255);
-  img = loadImage("Mario.jpg");
+  img1 = loadImage("Mario.jpg");
+  img2 = loadImage("SuperMarioGalaxy.png");
+  img3 = loadImage("Google.svg");
+  size(img.width, img.height);
 }
 
 void draw() {
-  for (int i = 0; i < 10; i ++){
+  drawImage(img1);
+  drawImage(img2);
+  drawImage(img3);
+}
+
+void drawImage(image) {
+  for (int i = 0; i < 500; i ++){
     rand_x = int(random(0, 600));
     rand_y = int(random(0, 600));
     //image(img, 0, 0);
-    color c = img.get(rand_x, rand_y);
+    color c = image.get(rand_x, rand_y);
     //print(c);
     fill(c);
     noStroke();
