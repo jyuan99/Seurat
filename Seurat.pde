@@ -1,6 +1,6 @@
 /* @pjs preload = "Mario.jpg"; */
 /* @pjs preload = "SuperMarioGalaxy.png"; */
-/* @pjs preload = "Google.svg"; */
+/* @pjs preload = "Google.png"; */
 
 PImage img1, img2, img3;
 int rand_x, rand_y;
@@ -9,7 +9,7 @@ void setup() {
   background(255);
   img1 = loadImage("Mario.jpg");
   img2 = loadImage("SuperMarioGalaxy.png");
-  img3 = loadImage("Google.svg");
+  img3 = loadImage("Google.png");
   size(img.width, img.height);
 }
 
