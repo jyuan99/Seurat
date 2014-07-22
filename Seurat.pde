@@ -1,6 +1,8 @@
 /* @pjs preload = "Mario.jpg"; */
+/* @pjs preload = "SuperMarioGalaxy.png"; */
+/* @pjs preload = "Google.svg"; */
 
-PImage img;
+PImage img1, img2, img3;
 int rand_x, rand_y;
 
 void setup() {
