@@ -1,3 +1,5 @@
+/* @pjs preload = "Mario.jpg"; */
+
 PImage img;
 int rand_x, rand_y;
 
