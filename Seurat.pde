@@ -4,31 +4,33 @@
 
 PImage img1, img2, img3;
 int rand_x, rand_y;
+int count = 0;
 
 void setup() {
   background(255);
   img1 = loadImage("Mario.jpg");
   img2 = loadImage("SuperMarioGalaxy.png");
-  img3 = loadImage("Google.png");
-  size(img.width, img.height);
+  size(img1.width, img1.height);
 }
 
 void draw() {
-  drawImage(img1);
-  drawImage(img2);
-  drawImage(img3);
-}
-
-void drawImage(image) {
-  for (int i = 0; i < 500; i ++){
-    rand_x = int(random(0, 600));
-    rand_y = int(random(0, 600));
+  for (int i = 0; i < 10; i++){ //i < 10 here specifies the speed of the program: the program only draws to canvas AFTER draw loop has run
+    rand_x = int(random(0, img1.width));
+    rand_y = int(random(0, img1.height));
     //image(img, 0, 0);
-    color c = image.get(rand_x, rand_y);
+    color c = img1.get(rand_x, rand_y);
     //print(c);
     fill(c);
     noStroke();
     ellipseMode(CENTER);
     ellipse(rand_x, rand_y, 15, 15);
+    count++;
+  }
+  if (count > 3000){  
+    PImage temp = img1;
+    img1 = img2;
+    img2 = temp;
+    size(img1.width, img1.height);
+    count = 0;
   }
 }
