@@ -9,7 +9,7 @@
 PImage img1, img2, img3;
 int rand_x, rand_y;
 int count = 0;
-int Int;
+//int Int;
 float diameter = 15;
 
 void setup() {
@@ -22,6 +22,15 @@ void setup() {
 }
 
 void draw() {
+  if (keyPressed && key == 'd') {
+    diameter++;
+    background(255);
+  }
+  else if (keyPressed && key == 's'){
+    diameter--;
+    background(255);
+  }
+  
   for (int i = 0; i < 10; i++){ //i < 10 here specifies the speed of the program: the program only draws to canvas AFTER draw loop has run
     rand_x = int(random(0, img1.width));
     rand_y = int(random(0, img1.height));
@@ -33,14 +42,6 @@ void draw() {
     ellipseMode(CENTER);
     ellipse(rand_x, rand_y, diameter, diameter);
     count++;
-  }
-  if (keyPressed && key == 'd') {
-    diameter++;
-    background(255);
-  }
-  else if (keyPressed && key == 's'){
-    diameter--;
-    background(255);
   }
   
 //  if (count > 5000){  
