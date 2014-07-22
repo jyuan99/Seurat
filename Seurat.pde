@@ -10,7 +10,7 @@ PImage img1, img2, img3;
 int rand_x, rand_y;
 int count = 0;
 int Int;
-float diameter;
+float diameter = 15;
 
 void setup() {
   background(255);
@@ -31,9 +31,18 @@ void draw() {
     fill(c);
     noStroke();
     ellipseMode(CENTER);
-    ellipse(rand_x, rand_y, 15, 15);
+    ellipse(rand_x, rand_y, diameter, diameter);
     count++;
   }
+  if (keyPressed && key == 'd') {
+    diameter++;
+    background(255);
+  }
+  else if (keyPressed && key == 's'){
+    diameter--;
+    background(255);
+  }
+  
 //  if (count > 5000){  
 //    PImage temp = img1;
 //    img1 = img2;
