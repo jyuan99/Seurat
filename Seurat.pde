@@ -16,7 +16,7 @@ void setup() {
   background(255);
   img1 = loadImage("Mario.jpg");
   img2 = loadImage("SuperMarioGalaxy.png");
-  size(img1.width, img1.height + 100);
+  size(img1.width, img1.height);
 //  Slider = new ControlP5(this);
 //  Slider.addSlider("Slider", 1, 30, 10, 20, img1.height + 20, img1.width - 40, 40);
 }
@@ -34,7 +34,7 @@ void draw() {
     ellipse(rand_x, rand_y, 15, 15);
     count++;
   }
-//  if (count > 3000){  
+//  if (count > 5000){  
 //    PImage temp = img1;
 //    img1 = img2;
 //    img2 = temp;
